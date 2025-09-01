@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing Page</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", Tahoma, sans-serif;
+    }
+
+    body {
+      background: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(to right, #4facfe, #00f2fe);
+      color: #fff;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+
+    header a {
+      background: #fff;
+      color: #4facfe;
+      padding: 12px 25px;
+      text-decoration: none;
+      border-radius: 25px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    header a:hover {
+      background: #333;
+      color: #fff;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 50px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .feature {
+      background: #fff;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .feature:hover {
+      transform: translateY(-8px);
+    }
+
+    .feature h3 {
+      color: #4facfe;
+      margin-bottom: 10px;
+    }
+
+    .about {
+      background: #f0f8ff;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .about h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .cta {
+      text-align: center;
+      padding: 60px 20px;
+      background: linear-gradient(to right, #00f2fe, #4facfe);
+      color: #fff;
+    }
+
+    .cta h2 {
+      margin-bottom: 20px;
+    }
+
+    .cta a {
+      background: #fff;
+      color: #4facfe;
+      padding: 12px 25px;
+      border-radius: 25px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .cta a:hover {
+      background: #333;
+      color: #fff;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #222;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+  <!-- Hero Section -->
+  <header>
+    <h1>Grow Your Business</h1>
+    <p>We help you reach new customers and boost your sales</p>
+    <a href="#features">Get Started</a>
+  </header>
+
+  <!-- Features Section -->
+  <section class="features" id="features">
+    <div class="feature">
+      <h3>🚀 Fast Performance</h3>
+      <p>Your website loads quickly and efficiently, ensuring a smooth user experience.</p>
+    </div>
+    <div class="feature">
+      <h3>🔒 Secure</h3>
+      <p>We keep your data safe with top-notch security measures and encryption.</p>
+    </div>
+    <div class="feature">
+      <h3>📱 Responsive</h3>
+      <p>Fully optimized for desktops, tablets, and mobile devices.</p>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about">
+    <h2>About Us</h2>
+    <p>
+      We are a team of passionate developers and marketers dedicated to building
+      solutions that make your business thrive in the digital age.
+    </p>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="cta">
+    <h2>Ready to grow with us?</h2>
+    <a href="#contact">Contact Us</a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Your Company. All rights reserved.</p>
+  </footer>
+</body>
+</html>
