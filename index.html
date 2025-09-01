@@ -3,168 +3,236 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Landing Page</title>
+  <title>Vishal Upadhyay | Portfolio</title>
   <style>
-    /* Reset */
+    /* ===== Global Styles ===== */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: "Segoe UI", Tahoma, sans-serif;
+      font-family: "Poppins", sans-serif;
     }
 
     body {
-      background: #f9f9f9;
-      color: #333;
+      background: #0f172a;
+      color: #f8fafc;
       line-height: 1.6;
     }
 
-    header {
-      background: linear-gradient(to right, #4facfe, #00f2fe);
-      color: #fff;
-      padding: 40px 20px;
-      text-align: center;
-    }
-
-    header h1 {
-      font-size: 3rem;
-      margin-bottom: 10px;
-    }
-
-    header p {
-      font-size: 1.2rem;
-      margin-bottom: 20px;
-    }
-
-    header a {
-      background: #fff;
-      color: #4facfe;
-      padding: 12px 25px;
+    a {
       text-decoration: none;
-      border-radius: 25px;
-      font-weight: bold;
+      color: inherit;
+    }
+
+    h1, h2, h3 {
+      font-weight: 600;
+    }
+
+    section {
+      padding: 80px 10%;
+    }
+
+    /* ===== Navbar ===== */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: #1e293b;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 10%;
+      z-index: 1000;
+    }
+
+    nav h1 {
+      font-size: 1.5rem;
+      color: #38bdf8;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li {
+      list-style: none;
+    }
+
+    nav ul li a {
+      color: #f8fafc;
+      font-weight: 500;
       transition: 0.3s;
     }
 
-    header a:hover {
-      background: #333;
+    nav ul li a:hover {
+      color: #38bdf8;
+    }
+
+    /* ===== Hero Section ===== */
+    .hero {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      flex-direction: column;
+      background: linear-gradient(to right, #0f172a, #1e293b);
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      color: #38bdf8;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin: 20px 0;
+    }
+
+    .hero button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 25px;
+      background: #38bdf8;
+      color: #0f172a;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .hero button:hover {
+      background: #0ea5e9;
       color: #fff;
     }
 
-    .features {
+    /* ===== About Section ===== */
+    .about {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .about img {
+      width: 280px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    }
+
+    .about-text {
+      max-width: 600px;
+    }
+
+    /* ===== Projects ===== */
+    .projects {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
-      padding: 50px 20px;
-      max-width: 1100px;
-      margin: auto;
     }
 
-    .feature {
-      background: #fff;
-      padding: 25px;
+    .project-card {
+      background: #1e293b;
+      padding: 20px;
       border-radius: 15px;
-      box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
-      text-align: center;
-      transition: transform 0.3s;
-    }
-
-    .feature:hover {
-      transform: translateY(-8px);
-    }
-
-    .feature h3 {
-      color: #4facfe;
-      margin-bottom: 10px;
-    }
-
-    .about {
-      background: #f0f8ff;
-      padding: 60px 20px;
-      text-align: center;
-    }
-
-    .about h2 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-    }
-
-    .cta {
-      text-align: center;
-      padding: 60px 20px;
-      background: linear-gradient(to right, #00f2fe, #4facfe);
-      color: #fff;
-    }
-
-    .cta h2 {
-      margin-bottom: 20px;
-    }
-
-    .cta a {
-      background: #fff;
-      color: #4facfe;
-      padding: 12px 25px;
-      border-radius: 25px;
-      font-weight: bold;
-      text-decoration: none;
       transition: 0.3s;
     }
 
-    .cta a:hover {
-      background: #333;
+    .project-card:hover {
+      transform: translateY(-5px);
+      background: #334155;
+    }
+
+    /* ===== Contact ===== */
+    .contact {
+      text-align: center;
+    }
+
+    .contact a {
+      display: inline-block;
+      margin: 10px;
+      padding: 10px 20px;
+      border-radius: 25px;
+      background: #38bdf8;
+      color: #0f172a;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .contact a:hover {
+      background: #0ea5e9;
       color: #fff;
     }
 
+    /* ===== Footer ===== */
     footer {
       text-align: center;
       padding: 20px;
-      background: #222;
-      color: #aaa;
+      background: #1e293b;
+      margin-top: 40px;
     }
   </style>
 </head>
 <body>
-  <!-- Hero Section -->
-  <header>
-    <h1>Grow Your Business</h1>
-    <p>We help you reach new customers and boost your sales</p>
-    <a href="#features">Get Started</a>
-  </header>
 
-  <!-- Features Section -->
-  <section class="features" id="features">
-    <div class="feature">
-      <h3>🚀 Fast Performance</h3>
-      <p>Your website loads quickly and efficiently, ensuring a smooth user experience.</p>
-    </div>
-    <div class="feature">
-      <h3>🔒 Secure</h3>
-      <p>We keep your data safe with top-notch security measures and encryption.</p>
-    </div>
-    <div class="feature">
-      <h3>📱 Responsive</h3>
-      <p>Fully optimized for desktops, tablets, and mobile devices.</p>
-    </div>
+  <!-- Navbar -->
+  <nav>
+    <h1>Vishal</h1>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Hi, I'm Vishal Upadhyay</h1>
+    <p>A Passionate PHP & Laravel Developer</p>
+    <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Hire Me</button>
   </section>
 
   <!-- About Section -->
-  <section class="about">
-    <h2>About Us</h2>
-    <p>
-      We are a team of passionate developers and marketers dedicated to building
-      solutions that make your business thrive in the digital age.
-    </p>
+  <section id="about" class="about">
+    <img src="https://via.placeholder.com/280" alt="Profile Picture">
+    <div class="about-text">
+      <h2>About Me</h2>
+      <p>I am a full-stack developer skilled in PHP, Laravel, JavaScript, and MySQL. I love building interactive, efficient, and user-friendly web applications. My goal is to grow as a developer and create impactful digital solutions.</p>
+    </div>
   </section>
 
-  <!-- Call to Action -->
-  <section class="cta">
-    <h2>Ready to grow with us?</h2>
-    <a href="#contact">Contact Us</a>
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2>My Projects</h2>
+    <div class="projects">
+      <div class="project-card">
+        <h3>Shopping Website</h3>
+        <p>A responsive e-commerce website built using PHP, MySQL, and AJAX.</p>
+      </div>
+      <div class="project-card">
+        <h3>CRM System</h3>
+        <p>A PHP-based CRM with user authentication, client management, and reports.</p>
+      </div>
+      <div class="project-card">
+        <h3>WordPress Theme</h3>
+        <p>Custom WordPress theme development for an educational platform.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <p>Let’s build something great together 🚀</p>
+    <a href="mailto:vishalupadhyay@gmail.com">Email Me</a>
+    <a href="https://github.com/" target="_blank">GitHub</a>
+    <a href="https://linkedin.com/" target="_blank">LinkedIn</a>
   </section>
 
   <!-- Footer -->
   <footer>
-    <p>© 2025 Your Company. All rights reserved.</p>
+    <p>© 2025 Vishal Upadhyay | Built with ❤️</p>
   </footer>
+
 </body>
 </html>
